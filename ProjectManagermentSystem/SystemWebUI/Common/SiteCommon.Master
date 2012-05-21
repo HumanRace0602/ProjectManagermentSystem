@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteCommon.master.cs" Inherits="SystemWebUI.Common.SiteCommon" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<link rel="stylesheet" href="../resources/css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../resources/css/style.css" type="text/css" media="screen" />	
+        <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>			
+	</head>
+<body style="font-family: Arial, Helvetica, sans-serif;
+             color: #555;
+             background-image:url('../resources/images/bg-body.gif');
+             background-repeat:repeat;
+             background-position:center;
+             background-color:#222;
+             font-size:12px;"
+             >
+    <div style=" text-align:center;margin:0px auto;">
+    <div style="height:900px; width:85%; ">
+        <div class="Top">
+        <div style=" height:5%">
+        <hr style=" color:#006400"/>
+        </div>
+        <div style=" height:90%; text-align:left">  
+            <img alt="" src="../resources/images/title.jpg" height="100%" width="40%"/>
+        </div> 
+        <div style=" height:5%">
+        <hr style=" color:#006400"/>
+        </div>
+        </div>
+        <div style=" text-align:center;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="10fea67f-fac0-40b4-a140-5c36f1fe6925" name="Human@HUMAN-PC 2012-05-18 20:49:39" runUser="Human-PC\Human" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="1b57fa97-6b34-4fe5-9917-aff5d01f5e95">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Human_HUMAN-PC 2012-05-18 20_49_39">
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_Bins\Iesi.Collections.dll" />
+      <DeploymentItem filename="G:\ProjectManagermentSystem\BusinessLogicLib\bin\Debug\BusinessLogicLib.dll" />
+      <DeploymentItem filename="G:\ProjectManagermentSystem\DataModels\bin\Debug\DataModels.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\Castle\Castle.Core.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\Castle\NHibernate.ByteCode.Castle.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\LinFu\LinFu.DynamicProxy.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Tests\log4net.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_Bins\NHibernate.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\LinFu\NHibernate.ByteCode.LinFu.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-05-18T20:49:39.3688007+08:00" queuing="2012-05-18T20:49:56.6577896+08:00" start="2012-05-18T20:49:57.9058609+08:00" finish="2012-05-18T20:50:38.3691753+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="IsUserRegisteredTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="1c3a1a72-f5a6-0448-5adb-5a319e4dfb6c">
+      <Execution id="b7419f15-3627-4afb-9202-51932c914ab7" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.LoginTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsUserRegisteredTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="1c3a1a72-f5a6-0448-5adb-5a319e4dfb6c" executionId="b7419f15-3627-4afb-9202-51932c914ab7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b7419f15-3627-4afb-9202-51932c914ab7" testId="1c3a1a72-f5a6-0448-5adb-5a319e4dfb6c" testName="IsUserRegisteredTest" computerName="HUMAN-PC" duration="00:00:34.2226052" startTime="2012-05-18T20:49:58.3638871+08:00" endTime="2012-05-18T20:50:36.6420765+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7419f15-3627-4afb-9202-51932c914ab7">
+      <Output>
+        <DebugTrace>QTAgent32.exe Warning: 0 : Could not kill query,  aborting connection. Exception was 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+QTAgent32.exe Error: 0 : Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+</DebugTrace>
+        <ErrorInfo>
+          <Message>测试方法 ProjectManagermentSystemTest.LoginTest.IsUserRegisteredTest 引发了异常: 
+System.TypeInitializationException: “BusinessLogicLib.NHibernate.NHibernateHelper”的类型初始值设定项引发异常。 ---&gt; MySql.Data.MySqlClient.MySqlException: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---&gt; System.TimeoutException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 ---&gt; System.IO.IOException: 无法从传输连接中读取数据: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。。 ---&gt; System.Net.Sockets.SocketException: 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。</Message>
+          <StackTrace>    在 System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+ --- 内部异常堆栈跟踪的末尾 ---
+    在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   在 MyNetworkStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+ --- 内部异常堆栈跟踪的末尾 ---
+    在 MyNetworkStream.HandleOrRethrowException(Exception e)
+   在 MyNetworkStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   在 MySql.Data.MySqlClient.TimedStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   在 System.IO.BufferedStream.Read(Byte[] array, Int32 offset, Int32 count)
+   在 MySql.Data.MySqlClient.MySqlStream.ReadFully(Stream stream, Byte[] buffer, Int32 offset, Int32 count)
+   在 MySql.Data.MySqlClient.MySqlStream.LoadPacket()
+   在 MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   在 MySql.Data.MySqlClient.NativeDriver.GetResult(Int32&amp; affectedRow, Int32&amp; insertedId)
+   在 MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32&amp; affectedRows, Int32&amp; insertedId)
+   在 MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId)
+   在 MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+ --- 内部异常堆栈跟踪的末尾 ---
+    在 MySql.Data.MySqlClient.MySqlConnection.HandleTimeoutOrThreadAbort(Exception ex)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   在 MySql.Data.MySqlClient.Driver.LoadCharacterSets(MySqlConnection connection)
+   在 MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 NHibernate.Connection.DriverConnectionProvider.GetConnection() 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Connection\DriverConnectionProvider.cs:行号 46
+   在 NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare() 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Tool\hbm2ddl\SuppliedConnectionProviderConnectionHelper.cs:行号 25
+   在 NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Tool\hbm2ddl\SchemaMetadataUpdater.cs:行号 43
+   在 NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Tool\hbm2ddl\SchemaMetadataUpdater.cs:行号 17
+   在 NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Impl\SessionFactoryImpl.cs:行号 169
+   在 NHibernate.Cfg.Configuration.BuildSessionFactory() 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Cfg\Configuration.cs:行号 1246
+   在 BusinessLogicLib.NHibernate.NHibernateHelper..cctor() 位置 G:\ProjectManagermentSystem\BusinessLogicLib\NHibernate\NHibernateHelper.cs:行号 21
+ --- 内部异常堆栈跟踪的末尾 ---
+    在 BusinessLogicLib.NHibernate.NHibernateHelper.GetSession()
+   在 BusinessLogicLib.UserLogin.UserLogin.IsUserRegistered(String userName) 位置 G:\ProjectManagermentSystem\BusinessLogicLib\UserLogin\UserLogin.cs:行号 16
+   在 ProjectManagermentSystemTest.LoginTest.IsUserRegisteredTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\LoginTest.cs:行号 74
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

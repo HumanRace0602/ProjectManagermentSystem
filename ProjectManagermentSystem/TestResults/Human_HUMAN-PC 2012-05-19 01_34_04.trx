@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="49224243-6e42-4679-a1fb-0214a362aca1" name="Human@HUMAN-PC 2012-05-19 01:34:04" runUser="Human-PC\Human" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="1b57fa97-6b34-4fe5-9917-aff5d01f5e95">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Human_HUMAN-PC 2012-05-19 01_34_04">
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_Bins\Iesi.Collections.dll" />
+      <DeploymentItem filename="G:\ProjectManagermentSystem\BusinessLogicLib\bin\Debug\BusinessLogicLib.dll" />
+      <DeploymentItem filename="G:\ProjectManagermentSystem\DataModels\bin\Debug\DataModels.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\Castle\Castle.Core.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\Castle\NHibernate.ByteCode.Castle.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\LinFu\LinFu.DynamicProxy.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Tests\log4net.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_Bins\NHibernate.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\LinFu\NHibernate.ByteCode.LinFu.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-05-19T01:34:04.6758804+08:00" queuing="2012-05-19T01:34:06.8330038+08:00" start="2012-05-19T01:34:07.0740176+08:00" finish="2012-05-19T01:34:27.0991630+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="DatabaseConn" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="268f3f96-d4bc-37c4-2cca-d565f9d92e09">
+      <Execution id="377fdaac-be65-474f-9e44-3b96cb3cb03d" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.LoginTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DatabaseConn" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="268f3f96-d4bc-37c4-2cca-d565f9d92e09" executionId="377fdaac-be65-474f-9e44-3b96cb3cb03d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="377fdaac-be65-474f-9e44-3b96cb3cb03d" testId="268f3f96-d4bc-37c4-2cca-d565f9d92e09" testName="DatabaseConn" computerName="HUMAN-PC" duration="00:00:17.8142644" startTime="2012-05-19T01:34:07.2500277+08:00" endTime="2012-05-19T01:34:26.3771217+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="377fdaac-be65-474f-9e44-3b96cb3cb03d">
+      <Output>
+        <DebugTrace>QTAgent32.exe Error: 0 : Unable to connect to any of the specified MySQL hosts.
+</DebugTrace>
+        <ErrorInfo>
+          <Message>测试方法 ProjectManagermentSystemTest.LoginTest.DatabaseConn 引发了异常: 
+MySql.Data.MySqlClient.MySqlException: Unable to connect to any of the specified MySQL hosts.</Message>
+          <StackTrace>    在 MySql.Data.MySqlClient.NativeDriver.Open()
+   在 MySql.Data.MySqlClient.Driver.Open()
+   在 MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   在 MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   在 MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   在 MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   在 MySql.Data.MySqlClient.MySqlConnection.Open()
+   在 NHibernate.Connection.DriverConnectionProvider.GetConnection() 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Connection\DriverConnectionProvider.cs:行号 46
+   在 NHibernate.Tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.Prepare() 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Tool\hbm2ddl\SuppliedConnectionProviderConnectionHelper.cs:行号 25
+   在 NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.GetReservedWords(Dialect dialect, IConnectionHelper connectionHelper) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Tool\hbm2ddl\SchemaMetadataUpdater.cs:行号 43
+   在 NHibernate.Tool.hbm2ddl.SchemaMetadataUpdater.Update(ISessionFactory sessionFactory) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Tool\hbm2ddl\SchemaMetadataUpdater.cs:行号 17
+   在 NHibernate.Impl.SessionFactoryImpl..ctor(Configuration cfg, IMapping mapping, Settings settings, EventListeners listeners) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Impl\SessionFactoryImpl.cs:行号 169
+   在 NHibernate.Cfg.Configuration.BuildSessionFactory() 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Cfg\Configuration.cs:行号 1246
+   在 ProjectManagermentSystemTest.LoginTest.DatabaseConn() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\LoginTest.cs:行号 89
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
