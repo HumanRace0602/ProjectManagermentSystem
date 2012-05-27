@@ -1,0 +1,59 @@
+﻿<P>
+<STYLE>
+@font-face{
+font-family:"Times New Roman";
+}
+
+@font-face{
+font-family:"&#23435;&#20307;";
+}
+
+@font-face{
+font-family:"Symbol";
+}
+
+@font-face{
+font-family:"Arial";
+}
+
+@font-face{
+font-family:"&#40657;&#20307;";
+}
+
+@font-face{
+font-family:"Courier New";
+}
+
+@font-face{
+font-family:"Wingdings";
+}
+
+p.p0{
+margin:0pt;
+margin-bottom:0.0001pt;
+margin-bottom:0pt;
+margin-top:0pt;
+color:rgb(0,0,0); font-size:10.0000pt; font-family:'Times New Roman'; }
+
+span.10{
+font-size:10.0000pt; font-family:'Times New Roman'; }
+
+p.p15{
+margin-bottom:0pt;
+margin-top:0pt;
+color:rgb(0,0,0); font-size:10.0000pt; font-family:'Courier New'; }
+
+p.p16{
+margin-bottom:5.0000pt;
+margin-top:5.0000pt;
+font-size:12.0000pt; font-family:'Times New Roman'; }
+@page{mso-page-border-surround-header:no;
+	mso-page-border-surround-footer:no;}@page Section0{
+margin-top:72.0000pt;
+margin-bottom:72.0000pt;
+margin-left:72.0000pt;
+margin-right:36.0000pt;
+size:595.4500pt 841.7000pt;
+}
+div.Section0{page:Section0;}</STYLE>
+<!--StartFragment-->`12</P>

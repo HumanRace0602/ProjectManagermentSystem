@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="DataModels.Object" assembly="DataModels">
+
+  <class name="Project" table="projecttable">
+    <id name="id">
+      <column name="id" sql-type="int(11)" not-null="true"/>
+      <generator class="native" />
+    </id>
+    <property name="projectName">
+      <column name="projectname"  not-null="true" />
+    </property>
+    <property name="projectContext">
+      <column name="projectcontext"  not-null="true" />
+    </property>
+    <property name="projectPublishTime">
+      <column name="projectdate" />
+    </property>
+    <property name="projectState" >
+      <column name="ispass" />
+    </property>
+  </class>
+</hibernate-mapping>

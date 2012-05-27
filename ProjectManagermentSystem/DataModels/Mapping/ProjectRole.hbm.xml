@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+    namespace="DataModels.Object" assembly="DataModels">
+
+  <class name="ProjectRole" table="roletable">
+    <id name="id">
+      <column name="id" sql-type="int(11)" not-null="true"/>
+      <generator class="native" />
+    </id>
+    <property name="role">
+      <column name="rolename"  not-null="true" />
+    </property>
+    <property name="userName">
+      <column name="rolemen"  not-null="true" />
+    </property>
+    <property name="projectId">
+      <column name="pr_id" />
+    </property>
+    <property name="state">
+      <column name="state" />
+    </property>
+  </class>
+</hibernate-mapping>

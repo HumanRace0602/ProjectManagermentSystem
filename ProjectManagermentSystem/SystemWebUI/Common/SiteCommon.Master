@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteCommon.master.cs" Inherits="SystemWebUI.Common.SiteCommon" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,35 +11,79 @@
 		<link rel="stylesheet" href="../resources/css/reset.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="../resources/css/style.css" type="text/css" media="screen" />	
         <asp:ContentPlaceHolder id="head" runat="server">
-    </asp:ContentPlaceHolder>			
+    </asp:ContentPlaceHolder>		
+	    <style type="text/css">
+            .style2
+            {
+                height: 140px;
+            }
+        </style>
 	</head>
 <body style="font-family: Arial, Helvetica, sans-serif;
              color: #555;
              background-image:url('../resources/images/bg-body.gif');
              background-repeat:repeat;
              background-position:center;
-             background-color:#222;
+             background-color:transparent;
              font-size:12px;"
+             
              >
+    <form id="form1" runat="server">
     <div style=" text-align:center;margin:0px auto;">
-    <div style="height:900px; width:85%; ">
+    <div style="height:900px; width:70%; ">
         <div class="Top">
         <div style=" height:5%">
         <hr style=" color:#006400"/>
         </div>
-        <div style=" height:90%; text-align:left">  
-            <img alt="" src="../resources/images/title.jpg" height="100%" width="40%"/>
+        <div style=" height:90%; text-align:left; width:100%;background-color:White"> 
+            <div style=" width:60%; height:100%; float:left"> 
+                <img alt="" src="../resources/images/title.jpg" height="100%" width="100%"/>
+            </div>
+            <div style=" width:40%; height:100%; float:right;background-color:White">                     
+                <img alt="" src="../resources/images/项目管理系统.gif" width="100%" />  
+                <div style=" padding-top:150px; text-align:right">
+                    <asp:Label ID="Label1" runat="server" Text="" Font-Size="Medium" ForeColor="#0066FF"></asp:Label>
+                    <asp:Button ID="Button1" runat="server" Text="Button" BorderWidth="0" 
+                        Font-Size="Medium" BackColor="White" onclick="Button1_Click" />
+                </div>             
+            </div>
+            
         </div> 
         <div style=" height:5%">
         <hr style=" color:#006400"/>
         </div>
         </div>
-        <div style=" text-align:center;">
+        <div class="Middle">
+            <div style=" height:90%">
+                <div style=" padding-top:10px;">
+                    <div style="float:left; height:100%">
+                        <asp:HyperLink ID="HyperLinkProjectBuiltByMe" runat="server" Font-Size="17px" 
+                            Height="70%" NavigateUrl="~/UserPage/MyProject.aspx" Target="Content" 
+                            Width="120px">我建立的项目</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLinkProjectJoinByMe" runat="server" Font-Size="17px" 
+                            Height="70%" NavigateUrl="C:\Users\Human\Desktop\Test7.html" Target="Content" 
+                            Width="120px">我参与的项目</asp:HyperLink>
+                    </div>
+                    <div style=" text-align:right">
+                        
+                        <asp:HyperLink ID="HyperLinkProjectBuiltByMe1" runat="server" Font-Size="17px" 
+                            Height="70%" NavigateUrl="~/Account/LogOn.aspx" Target="Content" 
+                            Width="101px">个人资料</asp:HyperLink>
+
+                    </div>
+                </div>
+            </div>
+            <div style=" height:10%">
+                <hr style=" color:#006400"/>
+            </div>
+        </div>
+        <div style=" height:65% ;text-align:center;">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
             </asp:ContentPlaceHolder>
         </div>
     </div>
     </div>
+    </form>
 </body>
 </html>

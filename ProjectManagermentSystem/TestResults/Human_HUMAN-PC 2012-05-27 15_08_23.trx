@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="32f894fa-28fa-4d28-a27c-d27d2a8470a8" name="Human@HUMAN-PC 2012-05-27 15:08:23" runUser="Human-PC\Human" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="1b57fa97-6b34-4fe5-9917-aff5d01f5e95">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Human_HUMAN-PC 2012-05-27 15_08_23">
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_Bins\Iesi.Collections.dll" />
+      <DeploymentItem filename="G:\ProjectManagermentSystem\BusinessLogicLib\bin\Debug\BusinessLogicLib.dll" />
+      <DeploymentItem filename="G:\ProjectManagermentSystem\DataModels\bin\Debug\DataModels.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\Castle\Castle.Core.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\Castle\NHibernate.ByteCode.Castle.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\LinFu\LinFu.DynamicProxy.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Tests\log4net.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_Bins\NHibernate.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\LinFu\NHibernate.ByteCode.LinFu.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-05-27T15:08:23.8761349+08:00" queuing="2012-05-27T15:08:26.1872671+08:00" start="2012-05-27T15:08:26.3762779+08:00" finish="2012-05-27T15:08:44.1082921+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="13" executed="13" passed="4" error="0" failed="9" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="IsProjectSetupByUser" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="69fa5293-5b96-8d4b-6238-8f599bb5fa30">
+      <Execution id="69169210-128a-4b81-a441-5094cc32ee59" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsProjectSetupByUser" />
+    </UnitTest>
+    <UnitTest name="IsUserValidatedTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="84e84e69-cf95-b596-f07a-b4fb77cb5f90">
+      <Execution id="c9f63daf-2c99-4135-8067-e6f595bb63f4" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.LoginTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsUserValidatedTest" />
+    </UnitTest>
+    <UnitTest name="IsUserRegisteredTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="1c3a1a72-f5a6-0448-5adb-5a319e4dfb6c">
+      <Execution id="e9ed34fa-7b98-4a35-beb4-51280cf8a8ed" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.LoginTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsUserRegisteredTest" />
+    </UnitTest>
+    <UnitTest name="FindSimilarUsersTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="dfaafef9-90e4-74fb-0cea-96ccbf8e361e">
+      <Execution id="815d1395-16f9-416c-90d4-417cd3ca159c" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.UserOperationTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FindSimilarUsersTest" />
+    </UnitTest>
+    <UnitTest name="AddNewProjectTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="eaea2ed1-9bcd-b38c-6ff0-c74f3cef5571">
+      <Execution id="d054751b-41fb-4312-9a6e-76b4129f6632" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddNewProjectTest" />
+    </UnitTest>
+    <UnitTest name="DatabaseConnTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="0544ed8d-33f7-ffba-ffdb-8034923fc999">
+      <Execution id="bb9e7793-bdbf-432b-b569-88ce820b6cc5" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.LoginTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DatabaseConnTest" />
+    </UnitTest>
+    <UnitTest name="UserRegisterTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="c1208b1a-0d55-4a78-3fa0-174c80597241">
+      <Execution id="8b6ac533-2553-412e-9da0-7310668340f5" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.LoginTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UserRegisterTest" />
+    </UnitTest>
+    <UnitTest name="DbConnectionTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="6d43179b-27d2-680a-c14c-3160f7ee5b92">
+      <Execution id="f4c0c856-7c79-411f-87fc-5fadeb17c00f" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DbConnectionTest" />
+    </UnitTest>
+    <UnitTest name="DbConnectionTest1" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="c449792e-1815-3c4b-0609-8969c7985188">
+      <Execution id="ac47a974-e2e2-4c68-a04e-ca7680402858" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DbConnectionTest1" />
+    </UnitTest>
+    <UnitTest name="FindExactUserTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="28c87d5d-f290-c4ca-b025-e1d00b57b080">
+      <Execution id="c3b92edc-638a-47f0-9ad6-eba2f1464bd5" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.UserOperationTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FindExactUserTest" />
+    </UnitTest>
+    <UnitTest name="MySetupProjectTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="ea350b06-1035-dbf5-0eee-cd514d5249f0">
+      <Execution id="31df274b-1a57-4be9-8fe4-f0cccd292546" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MySetupProjectTest" />
+    </UnitTest>
+    <UnitTest name="AddUserTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="ee3564a8-bedf-fee3-5c4c-07f2a336b2d3">
+      <Execution id="d9797e32-2003-42ad-98f3-3ce791d28842" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.LoginTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddUserTest" />
+    </UnitTest>
+    <UnitTest name="GetUserSetupProjectByIdTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="f7473b82-04ac-c209-6af2-0c28b329e702">
+      <Execution id="5bed7db1-2cef-4a3f-95a2-d1aa663e55b5" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetUserSetupProjectByIdTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0544ed8d-33f7-ffba-ffdb-8034923fc999" executionId="bb9e7793-bdbf-432b-b569-88ce820b6cc5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1c3a1a72-f5a6-0448-5adb-5a319e4dfb6c" executionId="e9ed34fa-7b98-4a35-beb4-51280cf8a8ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="28c87d5d-f290-c4ca-b025-e1d00b57b080" executionId="c3b92edc-638a-47f0-9ad6-eba2f1464bd5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="69fa5293-5b96-8d4b-6238-8f599bb5fa30" executionId="69169210-128a-4b81-a441-5094cc32ee59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d43179b-27d2-680a-c14c-3160f7ee5b92" executionId="f4c0c856-7c79-411f-87fc-5fadeb17c00f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="84e84e69-cf95-b596-f07a-b4fb77cb5f90" executionId="c9f63daf-2c99-4135-8067-e6f595bb63f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1208b1a-0d55-4a78-3fa0-174c80597241" executionId="8b6ac533-2553-412e-9da0-7310668340f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c449792e-1815-3c4b-0609-8969c7985188" executionId="ac47a974-e2e2-4c68-a04e-ca7680402858" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dfaafef9-90e4-74fb-0cea-96ccbf8e361e" executionId="815d1395-16f9-416c-90d4-417cd3ca159c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea350b06-1035-dbf5-0eee-cd514d5249f0" executionId="31df274b-1a57-4be9-8fe4-f0cccd292546" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eaea2ed1-9bcd-b38c-6ff0-c74f3cef5571" executionId="d054751b-41fb-4312-9a6e-76b4129f6632" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ee3564a8-bedf-fee3-5c4c-07f2a336b2d3" executionId="d9797e32-2003-42ad-98f3-3ce791d28842" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7473b82-04ac-c209-6af2-0c28b329e702" executionId="5bed7db1-2cef-4a3f-95a2-d1aa663e55b5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="bb9e7793-bdbf-432b-b569-88ce820b6cc5" testId="0544ed8d-33f7-ffba-ffdb-8034923fc999" testName="DatabaseConnTest" computerName="HUMAN-PC" duration="00:00:02.9497501" startTime="2012-05-27T15:08:26.6052910+08:00" endTime="2012-05-27T15:08:31.4405675+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bb9e7793-bdbf-432b-b569-88ce820b6cc5">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;hz2006&gt;，实际为: &lt;123&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.LoginTest.DatabaseConnTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\LoginTest.cs:行号 98
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e9ed34fa-7b98-4a35-beb4-51280cf8a8ed" testId="1c3a1a72-f5a6-0448-5adb-5a319e4dfb6c" testName="IsUserRegisteredTest" computerName="HUMAN-PC" duration="00:00:01.1830243" startTime="2012-05-27T15:08:31.4635688+08:00" endTime="2012-05-27T15:08:32.6836386+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9ed34fa-7b98-4a35-beb4-51280cf8a8ed">
+    </UnitTestResult>
+    <UnitTestResult executionId="c3b92edc-638a-47f0-9ad6-eba2f1464bd5" testId="28c87d5d-f290-c4ca-b025-e1d00b57b080" testName="FindExactUserTest" computerName="HUMAN-PC" duration="00:00:00.0547843" startTime="2012-05-27T15:08:32.6946393+08:00" endTime="2012-05-27T15:08:32.7696436+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3b92edc-638a-47f0-9ad6-eba2f1464bd5">
+    </UnitTestResult>
+    <UnitTestResult executionId="69169210-128a-4b81-a441-5094cc32ee59" testId="69fa5293-5b96-8d4b-6238-8f599bb5fa30" testName="IsProjectSetupByUser" computerName="HUMAN-PC" duration="00:00:00.5681883" startTime="2012-05-27T15:08:32.7866445+08:00" endTime="2012-05-27T15:08:33.3666777+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69169210-128a-4b81-a441-5094cc32ee59">
+      <Output>
+        <ErrorInfo>
+          <Message>测试方法 ProjectManagermentSystemTest.ProjectTest.IsProjectSetupByUser 引发了异常: 
+System.InvalidOperationException: 序列不包含任何元素</Message>
+          <StackTrace>    在 NHibernate.Linq.NhQueryProvider.ExecuteQuery(NhLinqExpression nhLinqExpression, IQuery query, NhLinqExpression nhQuery) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Linq\NhQueryProvider.cs:行号 89
+   在 NHibernate.Linq.NhQueryProvider.Execute(Expression expression) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Linq\NhQueryProvider.cs:行号 28
+   在 NHibernate.Linq.NhQueryProvider.Execute[TResult](Expression expression) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Linq\NhQueryProvider.cs:行号 103
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   在 BusinessLogicLib.UserProject.GetProjectById(ISession session, Int32 id) 位置 G:\ProjectManagermentSystem\BusinessLogicLib\Project\UserProject.cs:行号 67
+   在 BusinessLogicLib.UserProject.GetUserSetupProjects(String username) 位置 G:\ProjectManagermentSystem\BusinessLogicLib\Project\UserProject.cs:行号 48
+   在 BusinessLogicLib.UserProject.GetUserSetupProjectById(Int32 id, String username) 位置 G:\ProjectManagermentSystem\BusinessLogicLib\Project\UserProject.cs:行号 96
+   在 BusinessLogicLib.UserProject.IsProjectSetupByUser(Int32 id, String username) 位置 G:\ProjectManagermentSystem\BusinessLogicLib\Project\UserProject.cs:行号 147
+   在 ProjectManagermentSystemTest.ProjectTest.IsProjectSetupByUser() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\ProjectTest.cs:行号 124
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f4c0c856-7c79-411f-87fc-5fadeb17c00f" testId="6d43179b-27d2-680a-c14c-3160f7ee5b92" testName="DbConnectionTest" computerName="HUMAN-PC" duration="00:00:00.5139503" startTime="2012-05-27T15:08:33.3836787+08:00" endTime="2012-05-27T15:08:33.9097088+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f4c0c856-7c79-411f-87fc-5fadeb17c00f">
+      <Output>
+        <ErrorInfo>
+          <Message>测试方法 ProjectManagermentSystemTest.ProjectTest.DbConnectionTest 引发了异常: 
+System.NullReferenceException: 未将对象引用设置到对象的实例。</Message>
+          <StackTrace>    在 ProjectManagermentSystemTest.ProjectTest.DbConnectionTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\ProjectTest.cs:行号 84
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c9f63daf-2c99-4135-8067-e6f595bb63f4" testId="84e84e69-cf95-b596-f07a-b4fb77cb5f90" testName="IsUserValidatedTest" computerName="HUMAN-PC" duration="00:00:00.0805375" startTime="2012-05-27T15:08:33.9247096+08:00" endTime="2012-05-27T15:08:34.0167149+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c9f63daf-2c99-4135-8067-e6f595bb63f4">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;True&gt;，实际为: &lt;False&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.LoginTest.IsUserValidatedTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\LoginTest.cs:行号 105
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8b6ac533-2553-412e-9da0-7310668340f5" testId="c1208b1a-0d55-4a78-3fa0-174c80597241" testName="UserRegisterTest" computerName="HUMAN-PC" duration="00:00:00.0833532" startTime="2012-05-27T15:08:34.0297156+08:00" endTime="2012-05-27T15:08:34.1257211+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b6ac533-2553-412e-9da0-7310668340f5">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;True&gt;，实际为: &lt;False&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.LoginTest.UserRegisterTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\LoginTest.cs:行号 110
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ac47a974-e2e2-4c68-a04e-ca7680402858" testId="c449792e-1815-3c4b-0609-8969c7985188" testName="DbConnectionTest1" computerName="HUMAN-PC" duration="00:00:00.1880776" startTime="2012-05-27T15:08:34.1377218+08:00" endTime="2012-05-27T15:08:34.3387333+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac47a974-e2e2-4c68-a04e-ca7680402858">
+    </UnitTestResult>
+    <UnitTestResult executionId="815d1395-16f9-416c-90d4-417cd3ca159c" testId="dfaafef9-90e4-74fb-0cea-96ccbf8e361e" testName="FindSimilarUsersTest" computerName="HUMAN-PC" duration="00:00:00.0929759" startTime="2012-05-27T15:08:34.3507340+08:00" endTime="2012-05-27T15:08:34.4587402+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="815d1395-16f9-416c-90d4-417cd3ca159c">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;1&gt;，实际为: &lt;5&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.UserOperationTest.FindSimilarUsersTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\UserOperationTest.cs:行号 79
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="31df274b-1a57-4be9-8fe4-f0cccd292546" testId="ea350b06-1035-dbf5-0eee-cd514d5249f0" testName="MySetupProjectTest" computerName="HUMAN-PC" duration="00:00:00.0504523" startTime="2012-05-27T15:08:34.4787413+08:00" endTime="2012-05-27T15:08:34.5427450+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="31df274b-1a57-4be9-8fe4-f0cccd292546">
+    </UnitTestResult>
+    <UnitTestResult executionId="d054751b-41fb-4312-9a6e-76b4129f6632" testId="eaea2ed1-9bcd-b38c-6ff0-c74f3cef5571" testName="AddNewProjectTest" computerName="HUMAN-PC" duration="00:00:08.3264937" startTime="2012-05-27T15:08:34.5547457+08:00" endTime="2012-05-27T15:08:42.8962228+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d054751b-41fb-4312-9a6e-76b4129f6632">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;False&gt;，实际为: &lt;True&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.ProjectTest.AddNewProjectTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\ProjectTest.cs:行号 136
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d9797e32-2003-42ad-98f3-3ce791d28842" testId="ee3564a8-bedf-fee3-5c4c-07f2a336b2d3" testName="AddUserTest" computerName="HUMAN-PC" duration="00:00:00.1371311" startTime="2012-05-27T15:08:42.9282246+08:00" endTime="2012-05-27T15:08:43.0832335+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9797e32-2003-42ad-98f3-3ce791d28842">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;True&gt;，实际为: &lt;False&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.LoginTest.AddUserTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\LoginTest.cs:行号 126
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5bed7db1-2cef-4a3f-95a2-d1aa663e55b5" testId="f7473b82-04ac-c209-6af2-0c28b329e702" testName="GetUserSetupProjectByIdTest" computerName="HUMAN-PC" duration="00:00:00.2409346" startTime="2012-05-27T15:08:43.1062348+08:00" endTime="2012-05-27T15:08:43.3632495+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5bed7db1-2cef-4a3f-95a2-d1aa663e55b5">
+      <Output>
+        <ErrorInfo>
+          <Message>测试方法 ProjectManagermentSystemTest.ProjectTest.GetUserSetupProjectByIdTest 引发了异常: 
+System.InvalidOperationException: 序列不包含任何元素</Message>
+          <StackTrace>    在 NHibernate.Linq.NhQueryProvider.ExecuteQuery(NhLinqExpression nhLinqExpression, IQuery query, NhLinqExpression nhQuery) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Linq\NhQueryProvider.cs:行号 89
+   在 NHibernate.Linq.NhQueryProvider.Execute(Expression expression) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Linq\NhQueryProvider.cs:行号 28
+   在 NHibernate.Linq.NhQueryProvider.Execute[TResult](Expression expression) 位置 d:\CSharp\NH\NH\nhibernate\src\NHibernate\Linq\NhQueryProvider.cs:行号 103
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   在 BusinessLogicLib.UserProject.GetProjectById(ISession session, Int32 id) 位置 G:\ProjectManagermentSystem\BusinessLogicLib\Project\UserProject.cs:行号 67
+   在 BusinessLogicLib.UserProject.GetUserSetupProjects(String username) 位置 G:\ProjectManagermentSystem\BusinessLogicLib\Project\UserProject.cs:行号 48
+   在 BusinessLogicLib.UserProject.GetUserSetupProjectById(Int32 id, String username) 位置 G:\ProjectManagermentSystem\BusinessLogicLib\Project\UserProject.cs:行号 96
+   在 ProjectManagermentSystemTest.ProjectTest.GetUserSetupProjectByIdTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\ProjectTest.cs:行号 108
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

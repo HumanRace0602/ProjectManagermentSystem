@@ -17,7 +17,7 @@ namespace SystemWebUI
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            //BusinessLogicLib.NHibernate.NHibernateHelper.Start();
+            Session["userName"] = "traveller";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

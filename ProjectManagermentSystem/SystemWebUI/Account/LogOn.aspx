@@ -37,12 +37,12 @@
                   <ContentTemplate>
 					<p>
 						<label>用户名：</label>
-						<input name="userName" class="text-input" type="text" />
+						<input name="userName" id="userName" class="text-input" type="text" runat="server" />
 					</p>
 					<div class="clear"></div>
 					<p>
 						<label>密码：</label>
-						<input name="password" class="text-input" type="password" />
+						<input name="password" id="password" class="text-input" type="password" runat="server" />
 					</p>
                     <div class="clear"></div>
 					<p>
@@ -65,7 +65,7 @@
                        <asp:Label ID="LabelResult" runat="server" Text="" Font-Size="Medium" ForeColor="Red" ClientIDMode="Inherit"></asp:Label>
                      <div class="clear"></div>
                      <p>
-                        <label style="width: 250px;">还没有账号？点击这里进行<a href="">[注册]</a></label>
+                        <label style="width: 250px;">还没有账号？点击这里进行<a href="UserRegister.aspx">[注册]</a></label>
                      </p>
                 </ContentTemplate>
                 </asp:UpdatePanel>

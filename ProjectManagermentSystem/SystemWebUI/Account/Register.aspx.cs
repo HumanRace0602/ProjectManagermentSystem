@@ -17,7 +17,9 @@ namespace SystemWebUI.Account
                 {
                     DataModels.Object.User newUser = new DataModels.Object.User();
                     newUser.username = Request.Form["userName"];
-                    newUser.password = Request.Form["password"];
+                    string password = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(Request.Form["password"].ToString(),"MD5");
+                    int l = password.Length;
+                    newUser.password = password;
                     newUser.email = Request.Form["email"];
                     BusinessLogicLib.Account.Account.AddNewUser(newUser);
                     Label1.Text = "恭喜您注册成功！";
@@ -27,7 +29,7 @@ namespace SystemWebUI.Account
                     Label2.Text = "5秒后自动进入个人中心，你也可以：";
                     HyperLink1.Text = "<br/><br/>[点击这里]";
                     Label3.Text = "进入个人中心";
-                    Response.Write(" <meta   http-equiv='refresh'  content='3  url=../UserPage/MyPage.aspx'>");
+                    Response.Write(" <meta   http-equiv='refresh'  content='5  url=../UserPage/MyPage.aspx'>");
 
                 }
                 catch
