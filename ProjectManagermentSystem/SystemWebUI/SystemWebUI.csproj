@@ -32,9 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit, Version=4.1.60501.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Human\Desktop\AjaxControlToolkit.dll</HintPath>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\Human\ASP.NET\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -146,8 +145,10 @@
     <Content Include="resources\scripts\simpla.jquery.configuration.js" />
     <Content Include="UserPage\BuildNewProject.aspx" />
     <Content Include="UserPage\DetailProject.aspx" />
-    <Content Include="UserPage\DetailProjectDocument.aspx" />
+    <Content Include="UserPage\Error.aspx" />
     <Content Include="UserPage\Index.aspx" />
+    <Content Include="UserPage\MyJoinProject.aspx" />
+    <Content Include="UserPage\MyJoinProjectMessage.aspx" />
     <Content Include="UserPage\MyProject.aspx" />
     <Content Include="UserPage\ProjectDocuments\Execute.aspx" />
     <Content Include="UserPage\ProjectDocuments\Final.aspx" />
@@ -209,6 +210,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="PageClass\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Redirect.aspx.cs">
       <DependentUpon>Redirect.aspx</DependentUpon>
@@ -231,12 +235,12 @@
     <Compile Include="UserPage\DetailProject.aspx.designer.cs">
       <DependentUpon>DetailProject.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserPage\DetailProjectDocument.aspx.cs">
-      <DependentUpon>DetailProjectDocument.aspx</DependentUpon>
+    <Compile Include="UserPage\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserPage\DetailProjectDocument.aspx.designer.cs">
-      <DependentUpon>DetailProjectDocument.aspx</DependentUpon>
+    <Compile Include="UserPage\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPage\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -244,6 +248,20 @@
     </Compile>
     <Compile Include="UserPage\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\MyJoinProject.aspx.cs">
+      <DependentUpon>MyJoinProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\MyJoinProject.aspx.designer.cs">
+      <DependentUpon>MyJoinProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\MyJoinProjectMessage.aspx.cs">
+      <DependentUpon>MyJoinProjectMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\MyJoinProjectMessage.aspx.designer.cs">
+      <DependentUpon>MyJoinProjectMessage.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPage\MyProject.aspx.cs">
       <DependentUpon>MyProject.aspx</DependentUpon>

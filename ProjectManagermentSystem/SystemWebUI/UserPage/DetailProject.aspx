@@ -66,11 +66,9 @@
         </asp:Table>
         <br />
         <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" 
-            SelectMethod="GetUserSetupProjectById" TypeName="BusinessLogicLib.UserProject">
+            SelectMethod="GetProjectById" TypeName="BusinessLogicLib.UserProject">
             <SelectParameters>
-                <asp:QueryStringParameter DefaultValue="" Name="id" QueryStringField="id" 
-                    Type="Int32" />
-                <asp:SessionParameter Name="username" SessionField="userName" Type="String" />
+                <asp:QueryStringParameter Name="id" QueryStringField="id" Type="Int32" />
             </SelectParameters>
         </asp:ObjectDataSource>
     

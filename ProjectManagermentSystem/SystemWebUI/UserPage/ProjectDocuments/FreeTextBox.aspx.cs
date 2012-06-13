@@ -13,11 +13,19 @@ namespace SystemWebUI.UserPage.ProjectDocuments
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (UserProject.IsProjectSetupByUser(Int32.Parse(Request.QueryString["id"]), Session["userName"].ToString()))
+            if (UserProject.IsProjectSetupByUser(Int32.Parse(Request.QueryString["id"]), Session["userName"].ToString()) || UserProject.IsJoinByUser(Int32.Parse(Request.QueryString["id"]), Session["userName"].ToString()))
             {
                 if (!IsPostBack)
                 {
-                    string path = Server.MapPath("~/App_Data/Projects") + "\\" + Request.QueryString["id"] + "\\Final.txt";
+                    string path = String.Empty;
+                    if (Request.QueryString["documentType"] == "final")
+                    {
+                        path = Server.MapPath("~/App_Data/Projects") + "\\" + Request.QueryString["id"] + "\\Final.txt";
+                    }
+                    else if (Request.QueryString["documentType"] == "plan")
+                    {
+                        path = Server.MapPath("~/App_Data/Projects") + "\\" + Request.QueryString["id"] + "\\Plan.txt";
+                    }
                     if (File.Exists(path))
                     {
                         FreeTextBox2.Text = File.ReadAllText(path, System.Text.Encoding.UTF8);
@@ -31,19 +39,55 @@ namespace SystemWebUI.UserPage.ProjectDocuments
         protected void Button1_Click(object sender, EventArgs e)
         {
             string pathDir = Server.MapPath("~/App_Data/Projects") + "\\" + Request.QueryString["id"];
-            string path = pathDir + "\\Final.txt";
+            string path = String.Empty;
+            if (Request.QueryString["documentType"] == "final")
+            {
+                path = pathDir + "\\Final.txt";
+            }
+            else if (Request.QueryString["documentType"] == "plan")
+            {
+                path = pathDir + "\\Plan.txt";
+            }
+            else if (Request.QueryString["documentType"] == "execute")
+            {
+                path = pathDir + "\\Execute.txt";
+            }
+            else if (Request.QueryString["documentType"] == "request")
+            {
+                path = pathDir + "\\Request.txt";
+            }
             string text = FreeTextBox2.Text;
             if (!Directory.Exists(pathDir))
             {
                 Directory.CreateDirectory(pathDir);
             }
             File.WriteAllText(path, FreeTextBox2.Text, System.Text.Encoding.UTF8);
-            Response.Redirect("Final.aspx?id="+Request.QueryString["id"]+"&projectName="+Request.QueryString["projectName"]);
+            RedirectTo();   
+        }
+
+        private void RedirectTo()
+        {
+            if (Request.QueryString["documentType"] == "final")
+            {
+                Response.Redirect("Final.aspx?id=" + Request.QueryString["id"] + "&projectName=" + Request.QueryString["projectName"]);
+            }
+            else if (Request.QueryString["documentType"] == "plan")
+            {
+                Response.Redirect("Plan.aspx?id=" + Request.QueryString["id"] + "&projectName=" + Request.QueryString["projectName"]);
+            }
+            else if (Request.QueryString["documentType"] == "request")
+            {
+                Response.Redirect("Request.aspx?id=" + Request.QueryString["id"] + "&projectName=" + Request.QueryString["projectName"]);
+            }
+            else if (Request.QueryString["documentType"] == "execute")
+            {
+                Response.Redirect("Execute.aspx?id=" + Request.QueryString["id"] + "&projectName=" + Request.QueryString["projectName"]);
+            }
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Final.aspx?id=" + Request.QueryString["id"] + "&projectName=" + Request.QueryString["projectName"]);
+            RedirectTo();
         }
     }
 }

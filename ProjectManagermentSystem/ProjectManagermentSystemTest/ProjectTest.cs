@@ -7,6 +7,7 @@ using NHibernate.Cfg;
 using NHibernate;
 using DataModels.Object;
 using BusinessLogicLib;
+using BusinessLogicLib.NHibernate;
 
 namespace ProjectManagermentSystemTest
 {
@@ -100,24 +101,17 @@ namespace ProjectManagermentSystemTest
             factory.Close();
             Assert.AreEqual("Hill",role.userName);
         }
-
-        [TestMethod]
-        public void GetUserSetupProjectByIdTest()
-        {
-            UserProject project = new UserProject();
-            project = UserProject.GetUserSetupProjectById(3,"Hill");
-            Assert.AreEqual(project,null);
-        }
         [TestMethod]
         public void MySetupProjectTest()
         {
             List<UserProject> myProjects = new List<UserProject>();
             UserProject userProject = new UserProject();
-            myProjects = UserProject.GetUserSetupProjects("Hill");
+            myProjects = UserProject.GetProjectsByAuthority("Hill",true);
             //Assert.AreEqual((myProjects[0].projectPublishTime).ToString(), "2012/5/16 0:21:33");
             //Assert.AreEqual(myProjects[0].roles[0].role, "Admin");
-            bool result = (myProjects.Count == 0);
-            Assert.AreEqual(false,result);
+            //bool result = (myProjects.Count == 0);
+            //Assert.AreEqual(false,result);
+            Assert.AreEqual(myProjects[0].id, 11);
         }
         [TestMethod]
         public void IsProjectSetupByUser()
@@ -129,12 +123,45 @@ namespace ProjectManagermentSystemTest
         [TestMethod]
         public void AddNewProjectTest()
         {
-            //ProjectRole role = new ProjectRole{ role="Admin", userName="Hill", projectId=2};
-            //List<ProjectRole> roles = new List<ProjectRole>();
-            //roles.Add(role);
-            //UserProject newProject = new UserProject { projectName = "2", projectContext = "这是第二个项目", projectPublishTime = DateTime.Now, projectState = false, roles=roles};
-            //bool newResult = UserProject.AddNewProject(newProject);
-            //Assert.AreEqual(true, newResult);
+            ProjectRole role = new ProjectRole
+            {
+                projectId = 6,
+                role = "Admin",
+                userName = "Hill",
+                state = null
+            };
+            NHibernateHelper NHelper = NHibernateHelper.NHelper;
+            ISession session = NHelper.GetSession();
+
+            session.Save(role);
+        }
+
+        [TestMethod]
+        public void GetMessageTest()
+        {
+            string username = "Human";
+            List<BusinessLogicLib.Project.Message> messages = UserProject.GetMessage(username);
+            Assert.AreEqual(messages[0].ProjectOwner,"Human");
+        }
+        [TestMethod]
+        public void AcceptProjectTest()
+        {
+            bool result = BusinessLogicLib.UserProject.AcceptProject(15,"Human","Execute");
+            Assert.AreEqual(true,result);
+        }
+
+        [TestMethod]
+        public void AcceptProjectTest2()
+        {
+            bool result = BusinessLogicLib.UserProject.AcceptProject(12);
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void DenyProjectTest()
+        {
+            bool result = BusinessLogicLib.UserProject.DenyProject(8);
+            Assert.AreEqual(true, result);
         }
     }
 }

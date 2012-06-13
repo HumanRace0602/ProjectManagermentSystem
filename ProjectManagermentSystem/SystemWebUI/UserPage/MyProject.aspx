@@ -36,17 +36,18 @@
             <asp:TemplateField>
                 <ItemTemplate>
                     <asp:HyperLink ID="HyperLink1" runat="server" 
-                        NavigateUrl='<%# Eval("id","DetailProject.aspx?id={0}&") + Eval("projectName","projectName={0}") %>' 
-                        Text="详细"></asp:HyperLink>
+                        NavigateUrl='<%# Eval("id", "DetailProject.aspx?id={0}") %>' Text="详细"></asp:HyperLink>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
     </div>
     <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" 
-        SelectMethod="GetUserSetupProjects" TypeName="BusinessLogicLib.UserProject">
+        SelectMethod="GetProjectsByAuthority" 
+        TypeName="BusinessLogicLib.UserProject">
         <SelectParameters>
             <asp:SessionParameter Name="username" SessionField="userName" Type="String" />
+            <asp:Parameter DefaultValue="true" Name="flag" Type="Boolean" />
         </SelectParameters>
     </asp:ObjectDataSource>
     </form>

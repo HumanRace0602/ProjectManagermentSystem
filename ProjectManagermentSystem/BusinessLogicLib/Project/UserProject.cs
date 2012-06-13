@@ -11,9 +11,11 @@ namespace BusinessLogicLib
 {
     public class UserProject:DataModels.Object.Project
     {
+        #region 类的扩展属性
         public List<ProjectRole> roles { get; set; }
         public  string projectStateString { get; set; }
-
+        #endregion
+        #region 类的私有方法
         private static ISession GetNHibernateSession()
         {
             NHibernateHelper NHelper = NHibernateHelper.NHelper;
@@ -21,38 +23,7 @@ namespace BusinessLogicLib
             return session;
         }
 
-        public static List<UserProject> GetUserSetupProjects(string username)
-        {
-            ISession session = GetNHibernateSession();
-            List<UserProject> projects = new List<UserProject>();
-
-            List<ProjectRole> roles = new List<ProjectRole>();
-
-            roles = (from r in session.Query<ProjectRole>()
-                     where r.role == "Admin" && r.userName == username
-                     select r).ToList<ProjectRole>();
-            if (roles.Count == 0)
-            {
-                return projects;
-            }
-            var ids = (from r in roles
-                       select r.projectId).Distinct();
-
-           
-
-            if (roles.Count > 0)
-            {
-
-                foreach (var id in ids)
-                {
-                    UserProject project = GetProjectById(session, id);
-                    projects.Add(project);
-                }
-            }
-            return projects;
-        }
-
-        private static UserProject GetProjectById(ISession session, int id)
+        private static UserProject getProjectById(ISession session, int id)
         {
             List<ProjectRole> projectRoles = new List<ProjectRole>();
             projectRoles = (from pr in session.Query<ProjectRole>()
@@ -64,18 +35,18 @@ namespace BusinessLogicLib
             {
                 return project;
             }
-            project = (from p in session.Query<Project>()
+            project = (from p in session.Query<DataModels.Object.Project>()
                        where p.id == id
                        select new
                        UserProject
                        {
-                           id = id,
                            projectName = p.projectName,
-                           projectContext = p.projectContext,
-                           roles = projectRoles,
+                           projectContext = p.projectContext,                          
                            projectPublishTime = p.projectPublishTime
                        }).First();
-            bool state = (from p in session.Query<Project>()
+            project.id = id;
+            project.roles = projectRoles;
+            bool state = (from p in session.Query<DataModels.Object.Project>()
                           where p.id == id
                           select p.projectState).First();
             if (state)
@@ -88,33 +59,20 @@ namespace BusinessLogicLib
             }
             return project;
         }
-
-        public static UserProject GetUserSetupProjectById(int id , string username)
+        #endregion
+        #region 类的公有方法
+        public static UserProject GetProjectById(int id)
         {
-            UserProject userProject = null; 
-            List<UserProject> projects = new List<UserProject>();
-            projects = GetUserSetupProjects(username);
-            if (projects.Count == 0)
-            {
-                return userProject;
-            }
-            List<UserProject> myProjects = new List<UserProject>();
-            myProjects = (from up in projects
-                           where up.id == id
-                           select up).ToList();
-            if (myProjects.Count != 0)
-            {
-                userProject = new UserProject();
-                userProject = myProjects.First();
-            }
-            return userProject;
+            ISession session = GetNHibernateSession();
+            return getProjectById(session, id);
         }
 
-        public static List<ProjectRole> GetUserSetupProjectRolesById(int id, string username)
+        public static List<ProjectRole> GetProjectRolesByProjectId(int pr_id)
         {
             UserProject userProject = new UserProject();
             List<ProjectRole> roles = new List<ProjectRole>();
-            userProject = UserProject.GetUserSetupProjectById(id, username);
+            ISession session = GetNHibernateSession();
+            userProject = getProjectById(session,pr_id);
             roles = (from r in userProject.roles
                      select r).ToList<ProjectRole>();
             return roles;
@@ -124,7 +82,7 @@ namespace BusinessLogicLib
         public static bool IsAllowReadProject(int id, string username)
         {
             UserProject project = new UserProject();
-            project = GetProjectById(GetNHibernateSession(), id);
+            project = getProjectById(GetNHibernateSession(), id);
             bool result = false;
             if (project == null)
             {
@@ -144,17 +102,11 @@ namespace BusinessLogicLib
 
         public static bool IsProjectSetupByUser(int id, string username)
         {
-            UserProject myProject = new UserProject();
-            myProject = GetUserSetupProjectById(id, username);
-
-            if (myProject == null)
-            {
-                return false;
-            }
-
+            List<ProjectRole> roles = new List<ProjectRole>();
+            roles = GetProjectRolesByProjectId(id);
             List<string> users = new List<string>();
-            users = (from r in myProject.roles
-                        where r.projectId == id && r.role == "Admin" && r.userName == username
+            users = (from r in roles
+                        where r.role == "Admin" && r.userName == username
                         select r.userName).ToList();
             if (users.Count!=0)
             {
@@ -171,7 +123,7 @@ namespace BusinessLogicLib
             try
             {
                 ISession session = GetNHibernateSession();
-                Project project = new Project
+                DataModels.Object.Project project = new DataModels.Object.Project
                 {
                     projectName = userProject.projectName,
                     projectContext = userProject.projectContext,
@@ -179,7 +131,7 @@ namespace BusinessLogicLib
                     projectState = userProject.projectState
                 };
                 session.Save(project);
-                int pr_id = (from p in session.Query<Project>()
+                int pr_id = (from p in session.Query<DataModels.Object.Project>()
                              orderby p.id descending
                              select p.id).First();
                 foreach (ProjectRole r in userProject.roles)
@@ -196,9 +148,190 @@ namespace BusinessLogicLib
 
                 return true;
             }
-            catch(MySql.Data.MySqlClient.MySqlException ex)
+            catch
             {
-                //string e = ex.ToString();
+                return false;
+            }
+        }
+        //flag表示权限的选择，true表示是建立的项目，false表示参与但不是建立的项目
+        public static List<UserProject> GetProjectsByAuthority(string username, bool flag)
+        {
+            ISession session = GetNHibernateSession();
+            List<UserProject> projects = new List<UserProject>();
+
+            List<ProjectRole> roles = new List<ProjectRole>();
+            if (flag)
+            {
+                roles = (from r in session.Query<ProjectRole>()
+                         where r.role == "Admin" && r.userName == username
+                         select r).ToList<ProjectRole>();
+            }
+            else
+            {
+                roles = (from r in session.Query<ProjectRole>()
+                         where r.role != "Admin" && r.userName == username&&r.state=="Yes"
+                         select r).ToList<ProjectRole>();
+            }
+            if (roles.Count == 0)
+            {
+                return projects;
+            }
+            var ids = (from r in roles
+                       select r.projectId).Distinct();
+
+
+
+            if (roles.Count > 0)
+            {
+
+                foreach (var id in ids)
+                {
+                    UserProject project = UserProject.GetProjectById(id);
+                    projects.Add(project);
+                }
+            }
+            return projects;
+        }
+
+        public static bool IsProjectExecuteByUser(int id, string username)
+        {
+            List<ProjectRole> roles = new List<ProjectRole>();
+            roles = GetProjectRolesByProjectId(id);
+            List<string> users = new List<string>();
+            users = (from r in roles
+                     where r.role == "Execute" && r.userName == username
+                     select r.userName).ToList();
+            if (users.Count != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool IsProjectRequestByUser(int id, string username)
+        {
+            List<ProjectRole> roles = new List<ProjectRole>();
+            roles = GetProjectRolesByProjectId(id);
+            List<string> users = new List<string>();
+            users = (from r in roles
+                     where r.role == "Request" && r.userName == username
+                     select r.userName).ToList();
+            if (users.Count != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public static bool IsJoinByUser(int id, string userName)
+        {
+            List<ProjectRole> roles = new List<ProjectRole>();
+            roles = GetProjectRolesByProjectId(id);
+            List<string> users = new List<string>();
+            users = (from r in roles
+                     where r.role != "Admin" && r.userName == userName && r.state == "Yes"
+                     select r.userName).ToList();
+            if (users.Count != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static List<Project.Message> GetMessage(string username)
+        {
+            List<Project.Message> messagesTemp = new List<Project.Message>();
+            List<Project.Message> messages = new List<Project.Message>();
+            ISession session = GetNHibernateSession();
+            messagesTemp = (from m in session.Query<ProjectRole>()
+                            where m.userName == username && m.role != "Admin" && m.state == "Unknown"
+                            select new Project.Message { Id = m.id, ProjectId=m.projectId, Role = m.role, }).ToList();
+            foreach (Project.Message message in messagesTemp)
+            {
+                DataModels.Object.Project project = (from p in session.Query<DataModels.Object.Project>()
+                                                     where p.id == message.ProjectId
+                                                     select p).Single();
+                message.ProjectName = project.projectName;
+                message.ProjectDescription = project.projectContext;
+                string owner = (from r in session.Query<ProjectRole>()
+                                where r.projectId == message.ProjectId && r.role == "Admin"
+                                select r.userName).First();
+                message.ProjectOwner = owner;
+                messages.Add(message);
+
+            }
+
+            return messages;
+        }
+
+        public static bool AcceptProject(int projectId, string userName, string roleType)
+        {
+            try
+            {
+                ISession session = GetNHibernateSession();
+                ProjectRole role = (from r in session.Query<ProjectRole>()
+                                   where r.projectId==projectId&&r.userName==userName&& r.role==roleType
+                                   select r).Single();
+                role.state="Yes";
+                //session.Update(role);
+                session.SaveOrUpdate(role);
+                session.Flush();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static bool AcceptProject(int id)
+        {
+            try
+            {
+                ISession session = GetNHibernateSession();
+                ProjectRole role = (from r in session.Query<ProjectRole>()
+                                    where r.id==id
+                                    select r).Single();
+                role.state = "Yes";
+                //session.Update(role);
+                session.SaveOrUpdate(role);
+                session.Flush();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        #endregion
+
+
+        public static bool DenyProject(int id)
+        {
+            try
+            {
+                ISession session = GetNHibernateSession();
+                ProjectRole role = (from r in session.Query<ProjectRole>()
+                                    where r.id == id
+                                    select r).Single();
+                role.state = "No";
+                //session.Update(role);
+                session.SaveOrUpdate(role);
+                session.Flush();
+                return true;
+            }
+            catch
+            {
                 return false;
             }
         }

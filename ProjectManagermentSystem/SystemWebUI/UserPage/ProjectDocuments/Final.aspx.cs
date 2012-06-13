@@ -52,11 +52,11 @@ namespace SystemWebUI.UserPage.ProjectDocuments
         {
             if (Session["Button1"].ToString() == "Edit")
             {
-                this.Response.Redirect("FreeTextBox.aspx?id="+Request.QueryString["id"]+"&projectName="+Request.QueryString["projectName"]);
+                this.Response.Redirect("FreeTextBox.aspx?id="+Request.QueryString["id"]+"&projectName="+Request.QueryString["projectName"]+"&documentType=final");
             }
             if (Session["Button1"].ToString() == "Append")
             {
-                this.Response.Redirect("FreeTextBox.aspx?id=" + Request.QueryString["id"] + "&projectName=" + Request.QueryString["projectName"]);
+                this.Response.Redirect("FreeTextBox.aspx?id=" + Request.QueryString["id"] + "&projectName=" + Request.QueryString["projectName"] + "&documentType=final");
             }
         }
     }

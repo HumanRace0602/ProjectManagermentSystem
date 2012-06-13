@@ -9,20 +9,14 @@ using DataModels.Object;
 
 namespace SystemWebUI.UserPage
 {
-    public partial class BuildNewProject : System.Web.UI.Page
+    public partial class BuildNewProject : SystemWebUI.PageClass.BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["userName"].ToString() != "traveller")
+            
+            if (!IsPostBack)
             {
-                if (!IsPostBack)
-                {
-                    ButtonAddExecute.OnClientClick = "__doPostBack('" + this.ButtonAddExecute.UniqueID + "','')";
-                }
-            }
-            else
-            {
-                body.Visible = false;
+                ButtonAddExecute.OnClientClick = "__doPostBack('" + this.ButtonAddExecute.UniqueID + "','')";
             }
         }
 
@@ -121,7 +115,7 @@ namespace SystemWebUI.UserPage
                                                                state="Unknown"};
                     roles.Add(roleRequest);
                 }
-                if(!Object.Equals(Session["execteUsers"],null))
+                if(!Object.Equals(Session["executeUsers"],null))
                 {
                     List<string> users = new List<string>();
                     users = Session["executeUsers"] as List<string>;

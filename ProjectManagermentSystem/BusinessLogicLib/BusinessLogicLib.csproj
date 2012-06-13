@@ -69,6 +69,7 @@
     <Compile Include="Account\Captcha.cs" />
     <Compile Include="NHibernate\NHibernateHelper.cs" />
     <Compile Include="ProjectUser\ProjectUser.cs" />
+    <Compile Include="Project\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Account\Account.cs" />
     <Compile Include="Project\UserProject.cs" />

@@ -8,7 +8,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <p style=" color:Lime" id="title" runat="server"></p>
+    <asp:Button ID="Button1" runat="server" Text="Button" Visible="False" 
+            onclick="Button1_Click" /> 
+    <div id="divContext" runat="server">
     
     </div>
     </form>

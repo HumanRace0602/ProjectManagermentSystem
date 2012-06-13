@@ -100,9 +100,9 @@ namespace ProjectManagermentSystemTest
         [TestMethod]
         public void IsUserValidatedTest()
         {
-            bool validation =  Account.IsUserValidated("zhang", "123");
+            bool validation =  Account.IsUserValidated("zhangsan", "123");
 
-            Assert.AreEqual(false,validation);
+            Assert.AreEqual(true,validation);
         }
         [TestMethod]
         public void UserRegisterTest()

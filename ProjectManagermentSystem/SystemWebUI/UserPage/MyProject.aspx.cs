@@ -12,9 +12,7 @@ namespace SystemWebUI.UserPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //UserProject myProjects = new UserProject();
-            //GridViewMyProject.DataSource = myProjects.GetProjectsSetupByUser(Session["userName"].ToString());
-            //GridViewMyProject.DataBind();
+
         }
     }
 }

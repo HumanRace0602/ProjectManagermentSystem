@@ -61,8 +61,11 @@
                             Height="70%" NavigateUrl="~/UserPage/MyProject.aspx" Target="Content" 
                             Width="120px">我建立的项目</asp:HyperLink>
                         <asp:HyperLink ID="HyperLinkProjectJoinByMe" runat="server" Font-Size="17px" 
-                            Height="70%" NavigateUrl="C:\Users\Human\Desktop\Test7.html" Target="Content" 
+                            Height="70%" NavigateUrl="~/UserPage/MyJoinProject.aspx" Target="Content" 
                             Width="120px">我参与的项目</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLinkProjectMessage" runat="server" Font-Size="17px" 
+                            Height="70%" NavigateUrl="~/UserPage/MyJoinProjectMessage.aspx" Target="Content" 
+                            Width="120px">项目邀请消息</asp:HyperLink>
                     </div>
                     <div style=" text-align:right">
                         
