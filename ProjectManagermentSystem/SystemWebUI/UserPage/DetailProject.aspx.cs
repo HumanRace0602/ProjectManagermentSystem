@@ -21,19 +21,23 @@ namespace SystemWebUI.UserPage
                 string executeUsers = String.Empty;
                 foreach (ProjectRole pRole in pRoles)
                 {
-                    if (pRole.role == "Request")
+                    if (pRole.state == "Yes")
                     {
-                        TableCell2.Text = pRole.userName;
-                    }
-                    if (pRole.role == "Execute")
-                    {
-                        executeUsers += pRole.userName + " ";
+                        if (pRole.role == "Request")
+                        {
+                            TableCell2.Text = pRole.userName;
+                        }
+                        if (pRole.role == "Execute")
+                        {
+                            executeUsers += pRole.userName + " ";
+                        }
                     }
                     if (pRole.role == "Admin")
                     {
                         TableCell1.Text = pRole.userName;
                         TableCell4.Text = pRole.userName;
                     }
+                    
                 }
                 TableCell3.Text = executeUsers;
 
@@ -46,7 +50,21 @@ namespace SystemWebUI.UserPage
             {
                 Response.Redirect("Error.aspx");
             }
-            
+
+            if (BusinessLogicLib.UserProject.IsProjectFinished(Int32.Parse(Request.QueryString["id"])))
+            {
+                LinkButton1.Visible = false;
+            }
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            if (!BusinessLogicLib.UserProject.IsProjectFinished(Int32.Parse(Request.QueryString["id"])))
+            {
+                BusinessLogicLib.UserProject.FinishProject(Int32.Parse(Request.QueryString["id"]));
+                Response.Write("<script>alert('成功结束')</script>");
+                Response.Redirect("~/UserPage/MyProject.aspx");
+            }
         }
     }
 }

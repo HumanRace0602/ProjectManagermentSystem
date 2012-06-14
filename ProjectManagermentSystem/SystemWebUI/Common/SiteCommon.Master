@@ -68,10 +68,6 @@
                             Width="120px">项目邀请消息</asp:HyperLink>
                     </div>
                     <div style=" text-align:right">
-                        
-                        <asp:HyperLink ID="HyperLinkProjectBuiltByMe1" runat="server" Font-Size="17px" 
-                            Height="70%" NavigateUrl="~/Account/LogOn.aspx" Target="Content" 
-                            Width="101px">个人资料</asp:HyperLink>
 
                     </div>
                 </div>

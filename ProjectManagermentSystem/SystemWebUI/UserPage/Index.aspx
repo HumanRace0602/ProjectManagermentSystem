@@ -4,6 +4,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <iframe id="Content" src="Test.aspx" name="Content" allowtransparency="true" class="Iframe">
-</iframe>
+    <iframe id="Content" src="Test.aspx" name="Content"  class="Iframe">
+    </iframe>
 </asp:Content>

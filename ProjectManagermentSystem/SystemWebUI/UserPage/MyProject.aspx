@@ -4,29 +4,22 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <link rel="stylesheet" href="../resources/css/reset.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../resources/css/style.css" type="text/css" media="screen" />
-    <style type="text/css">
-        table{ width:100%; text-align: center;}
-        #GridViewMyProject th{ width:25%; text-align:center}
-        #GridViewMyProject td{ text-align:center}
-        .table1{ text-align:center}
-    </style>
-    	
+    <title></title>    	
 </head>
-<body  style="background-color:transparent">
+<body>
     <form id="form1" runat="server">
-    <div>
+
         <h2 style=" color:Green">我建立的项目</h2>
         <div style=" text-align:right">
             <asp:HyperLink ID="HyperLink2" runat="server" Font-Size="Medium" 
                 NavigateUrl="~/UserPage/BuildNewProject.aspx">新建项目</asp:HyperLink>
+                <br/>
         </div>
-    </div>
-    <div style=" text-align:center">
+    <br/>
+    <div>
     <asp:GridView ID="GridViewMyProject" runat="server" AutoGenerateColumns="False" AllowPaging="True" 
-        DataSourceID="ObjectDataSource1" Font-Size="20px" align="center" class="table1">
+        DataSourceID="ObjectDataSource1" align="center" 
+            Font-Size="Medium" Width="100%">
         <Columns>
             <asp:BoundField DataField="projectName" HeaderText="项目名称"
                 SortExpression="projectName" />         

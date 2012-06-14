@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1b127a1c-28f7-4a5e-9e68-958bab079c60" name="Human@HUMAN-PC 2012-06-14 11:42:11" runUser="Human-PC\Human" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="1b57fa97-6b34-4fe5-9917-aff5d01f5e95">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Human_HUMAN-PC 2012-06-14 11_42_11">
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_Bins\Iesi.Collections.dll" />
+      <DeploymentItem filename="G:\ProjectManagermentSystem\BusinessLogicLib\bin\Debug\BusinessLogicLib.dll" />
+      <DeploymentItem filename="G:\ProjectManagermentSystem\DataModels\bin\Debug\DataModels.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\Castle\Castle.Core.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\Castle\NHibernate.ByteCode.Castle.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\LinFu\LinFu.DynamicProxy.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Tests\log4net.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_Bins\NHibernate.dll" />
+      <DeploymentItem filename="G:\NHibernate-3.1.0\Required_For_LazyLoading\LinFu\NHibernate.ByteCode.LinFu.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-14T11:42:11.9829322+08:00" queuing="2012-06-14T11:42:14.6240833+08:00" start="2012-06-14T11:42:14.7730918+08:00" finish="2012-06-14T11:42:22.0945106+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="12" executed="12" passed="6" error="0" failed="6" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="MySetupProjectTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="ea350b06-1035-dbf5-0eee-cd514d5249f0">
+      <Execution id="fec96993-add1-49c0-ad53-4f0b899335c9" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MySetupProjectTest" />
+    </UnitTest>
+    <UnitTest name="IsProjectSetupByUser" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="69fa5293-5b96-8d4b-6238-8f599bb5fa30">
+      <Execution id="59e5bd61-e92c-4e80-b9d2-113221f0b868" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsProjectSetupByUser" />
+    </UnitTest>
+    <UnitTest name="AcceptProjectTest2" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="1c86192b-9488-0e18-a8ad-4e5ddff3dc34">
+      <Execution id="0b019632-cdc1-4cc7-a5a0-e57a1cd1f013" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AcceptProjectTest2" />
+    </UnitTest>
+    <UnitTest name="ChangeRequestorTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="002c86cf-ca51-a119-20be-d671c39ee3c1">
+      <Execution id="4e00abf1-32e3-4700-bb12-82b4826766d7" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangeRequestorTest" />
+    </UnitTest>
+    <UnitTest name="DbConnectionTest1" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="c449792e-1815-3c4b-0609-8969c7985188">
+      <Execution id="21e2bb6d-b3cb-424a-bbe9-ede7532d16d8" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DbConnectionTest1" />
+    </UnitTest>
+    <UnitTest name="DenyProjectTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="2d29e342-7b00-1a78-24da-30938291f370">
+      <Execution id="6f6abd66-f1a4-4523-9970-a25cd077b216" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DenyProjectTest" />
+    </UnitTest>
+    <UnitTest name="GetMessageTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="65496a2b-e474-43ce-14eb-95f4ee4bc514">
+      <Execution id="e7055b07-4c67-4973-8b34-a469fa534fa8" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GetMessageTest" />
+    </UnitTest>
+    <UnitTest name="AddNewProjectTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="eaea2ed1-9bcd-b38c-6ff0-c74f3cef5571">
+      <Execution id="9feec9cd-0711-486c-a3d9-f9d4436ec4a7" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddNewProjectTest" />
+    </UnitTest>
+    <UnitTest name="IsProjectFinished" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="63def25a-8f07-7b2d-740c-5d5b3fa65a4b">
+      <Execution id="3fa3b62b-daed-4354-803d-fda33723427e" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsProjectFinished" />
+    </UnitTest>
+    <UnitTest name="FinishProjectTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="bc760ccb-8bbd-c55f-eb73-98749c262730">
+      <Execution id="6241ba82-3cbb-4f3f-be60-07248f34eaa9" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FinishProjectTest" />
+    </UnitTest>
+    <UnitTest name="AcceptProjectTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="90a03dbc-7b00-d2af-6d92-22c02272ea80">
+      <Execution id="8846608d-6039-4404-85e4-2d3d76aa8c00" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AcceptProjectTest" />
+    </UnitTest>
+    <UnitTest name="DbConnectionTest" storage="g:\projectmanagermentsystem\projectmanagermentsystemtest\bin\debug\projectmanagermentsystemtest.dll" id="6d43179b-27d2-680a-c14c-3160f7ee5b92">
+      <Execution id="78cabd18-e3d4-40fd-b01f-36945b110da2" />
+      <TestMethod codeBase="G:/ProjectManagermentSystem/ProjectManagermentSystemTest/bin/Debug/ProjectManagermentSystemTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="ProjectManagermentSystemTest.ProjectTest, ProjectManagermentSystemTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DbConnectionTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="002c86cf-ca51-a119-20be-d671c39ee3c1" executionId="4e00abf1-32e3-4700-bb12-82b4826766d7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1c86192b-9488-0e18-a8ad-4e5ddff3dc34" executionId="0b019632-cdc1-4cc7-a5a0-e57a1cd1f013" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d29e342-7b00-1a78-24da-30938291f370" executionId="6f6abd66-f1a4-4523-9970-a25cd077b216" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63def25a-8f07-7b2d-740c-5d5b3fa65a4b" executionId="3fa3b62b-daed-4354-803d-fda33723427e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65496a2b-e474-43ce-14eb-95f4ee4bc514" executionId="e7055b07-4c67-4973-8b34-a469fa534fa8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="69fa5293-5b96-8d4b-6238-8f599bb5fa30" executionId="59e5bd61-e92c-4e80-b9d2-113221f0b868" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d43179b-27d2-680a-c14c-3160f7ee5b92" executionId="78cabd18-e3d4-40fd-b01f-36945b110da2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="90a03dbc-7b00-d2af-6d92-22c02272ea80" executionId="8846608d-6039-4404-85e4-2d3d76aa8c00" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc760ccb-8bbd-c55f-eb73-98749c262730" executionId="6241ba82-3cbb-4f3f-be60-07248f34eaa9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c449792e-1815-3c4b-0609-8969c7985188" executionId="21e2bb6d-b3cb-424a-bbe9-ede7532d16d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea350b06-1035-dbf5-0eee-cd514d5249f0" executionId="fec96993-add1-49c0-ad53-4f0b899335c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eaea2ed1-9bcd-b38c-6ff0-c74f3cef5571" executionId="9feec9cd-0711-486c-a3d9-f9d4436ec4a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="4e00abf1-32e3-4700-bb12-82b4826766d7" testId="002c86cf-ca51-a119-20be-d671c39ee3c1" testName="ChangeRequestorTest" computerName="HUMAN-PC" duration="00:00:03.6774747" startTime="2012-06-14T11:42:14.8530964+08:00" endTime="2012-06-14T11:42:20.7574341+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e00abf1-32e3-4700-bb12-82b4826766d7">
+    </UnitTestResult>
+    <UnitTestResult executionId="0b019632-cdc1-4cc7-a5a0-e57a1cd1f013" testId="1c86192b-9488-0e18-a8ad-4e5ddff3dc34" testName="AcceptProjectTest2" computerName="HUMAN-PC" duration="00:00:00.0678982" startTime="2012-06-14T11:42:20.7914361+08:00" endTime="2012-06-14T11:42:20.8804412+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b019632-cdc1-4cc7-a5a0-e57a1cd1f013">
+    </UnitTestResult>
+    <UnitTestResult executionId="6f6abd66-f1a4-4523-9970-a25cd077b216" testId="2d29e342-7b00-1a78-24da-30938291f370" testName="DenyProjectTest" computerName="HUMAN-PC" duration="00:00:00.0045905" startTime="2012-06-14T11:42:20.8964421+08:00" endTime="2012-06-14T11:42:20.9164432+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f6abd66-f1a4-4523-9970-a25cd077b216">
+    </UnitTestResult>
+    <UnitTestResult executionId="3fa3b62b-daed-4354-803d-fda33723427e" testId="63def25a-8f07-7b2d-740c-5d5b3fa65a4b" testName="IsProjectFinished" computerName="HUMAN-PC" duration="00:00:00.1080822" startTime="2012-06-14T11:42:20.9304440+08:00" endTime="2012-06-14T11:42:21.0524510+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fa3b62b-daed-4354-803d-fda33723427e">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;False&gt;，实际为: &lt;True&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.ProjectTest.IsProjectFinished() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\ProjectTest.cs:行号 178
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e7055b07-4c67-4973-8b34-a469fa534fa8" testId="65496a2b-e474-43ce-14eb-95f4ee4bc514" testName="GetMessageTest" computerName="HUMAN-PC" duration="00:00:00.0728139" startTime="2012-06-14T11:42:21.0744523+08:00" endTime="2012-06-14T11:42:21.1644574+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e7055b07-4c67-4973-8b34-a469fa534fa8">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;Hill&gt;，实际为: &lt;Human&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.ProjectTest.GetMessageTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\ProjectTest.cs:行号 144
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="59e5bd61-e92c-4e80-b9d2-113221f0b868" testId="69fa5293-5b96-8d4b-6238-8f599bb5fa30" testName="IsProjectSetupByUser" computerName="HUMAN-PC" duration="00:00:00.0534969" startTime="2012-06-14T11:42:21.1794583+08:00" endTime="2012-06-14T11:42:21.2454620+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59e5bd61-e92c-4e80-b9d2-113221f0b868">
+      <Output>
+        <ErrorInfo>
+          <Message>测试方法 ProjectManagermentSystemTest.ProjectTest.IsProjectSetupByUser 引发了异常: 
+System.ArgumentNullException: 值不能为 null。
+参数名: source</Message>
+          <StackTrace>    在 System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   在 BusinessLogicLib.UserProject.GetProjectRolesByProjectId(Int32 pr_id) 位置 G:\ProjectManagermentSystem\BusinessLogicLib\Project\UserProject.cs:行号 76
+   在 BusinessLogicLib.UserProject.IsProjectSetupByUser(Int32 id, String username) 位置 G:\ProjectManagermentSystem\BusinessLogicLib\Project\UserProject.cs:行号 106
+   在 ProjectManagermentSystemTest.ProjectTest.IsProjectSetupByUser() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\ProjectTest.cs:行号 119
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="78cabd18-e3d4-40fd-b01f-36945b110da2" testId="6d43179b-27d2-680a-c14c-3160f7ee5b92" testName="DbConnectionTest" computerName="HUMAN-PC" duration="00:00:00.1467094" startTime="2012-06-14T11:42:21.2644631+08:00" endTime="2012-06-14T11:42:21.4234722+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="78cabd18-e3d4-40fd-b01f-36945b110da2">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;4&gt;，实际为: &lt;2&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.ProjectTest.DbConnectionTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\ProjectTest.cs:行号 85
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8846608d-6039-4404-85e4-2d3d76aa8c00" testId="90a03dbc-7b00-d2af-6d92-22c02272ea80" testName="AcceptProjectTest" computerName="HUMAN-PC" duration="00:00:00.0089603" startTime="2012-06-14T11:42:21.4444734+08:00" endTime="2012-06-14T11:42:21.4654746+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8846608d-6039-4404-85e4-2d3d76aa8c00">
+    </UnitTestResult>
+    <UnitTestResult executionId="6241ba82-3cbb-4f3f-be60-07248f34eaa9" testId="bc760ccb-8bbd-c55f-eb73-98749c262730" testName="FinishProjectTest" computerName="HUMAN-PC" duration="00:00:00.0044663" startTime="2012-06-14T11:42:21.4794754+08:00" endTime="2012-06-14T11:42:21.4984765+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6241ba82-3cbb-4f3f-be60-07248f34eaa9">
+    </UnitTestResult>
+    <UnitTestResult executionId="21e2bb6d-b3cb-424a-bbe9-ede7532d16d8" testId="c449792e-1815-3c4b-0609-8969c7985188" testName="DbConnectionTest1" computerName="HUMAN-PC" duration="00:00:00.1149258" startTime="2012-06-14T11:42:21.5134774+08:00" endTime="2012-06-14T11:42:21.6444849+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21e2bb6d-b3cb-424a-bbe9-ede7532d16d8">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;Hill&gt;，实际为: &lt;Human&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.ProjectTest.DbConnectionTest1() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\ProjectTest.cs:行号 102
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fec96993-add1-49c0-ad53-4f0b899335c9" testId="ea350b06-1035-dbf5-0eee-cd514d5249f0" testName="MySetupProjectTest" computerName="HUMAN-PC" duration="00:00:00.0941731" startTime="2012-06-14T11:42:21.6594857+08:00" endTime="2012-06-14T11:42:21.7674919+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fec96993-add1-49c0-ad53-4f0b899335c9">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;10&gt;，实际为: &lt;11&gt;。</Message>
+          <StackTrace>   在 ProjectManagermentSystemTest.ProjectTest.MySetupProjectTest() 位置 G:\ProjectManagermentSystem\ProjectManagermentSystemTest\ProjectTest.cs:行号 114
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9feec9cd-0711-486c-a3d9-f9d4436ec4a7" testId="eaea2ed1-9bcd-b38c-6ff0-c74f3cef5571" testName="AddNewProjectTest" computerName="HUMAN-PC" duration="00:00:00.0276069" startTime="2012-06-14T11:42:21.8674976+08:00" endTime="2012-06-14T11:42:21.9195006+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9feec9cd-0711-486c-a3d9-f9d4436ec4a7">
+    </UnitTestResult>
+  </Results>
+</TestRun>

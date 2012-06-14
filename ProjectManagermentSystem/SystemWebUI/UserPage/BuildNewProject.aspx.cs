@@ -141,5 +141,10 @@ namespace SystemWebUI.UserPage
                 Label7.Text = "项目名不能为空";
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MyProject.aspx");
+        }
     }
 }

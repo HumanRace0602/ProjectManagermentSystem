@@ -163,5 +163,26 @@ namespace ProjectManagermentSystemTest
             bool result = BusinessLogicLib.UserProject.DenyProject(8);
             Assert.AreEqual(true, result);
         }
+
+        [TestMethod]
+        public void ChangeRequestorTest()
+        {
+            bool result = BusinessLogicLib.UserProject.ChangeRequestor(17,"Hill");
+            Assert.AreEqual(result, true);
+        }
+
+        [TestMethod]
+        public void IsProjectFinished()
+        {
+            bool result = BusinessLogicLib.UserProject.IsProjectFinished(5);
+            Assert.AreEqual(false,result);
+        }
+
+        [TestMethod]
+        public void FinishProjectTest()
+        {
+            bool result = BusinessLogicLib.UserProject.FinishProject(12);
+            Assert.AreEqual(true, result);
+        }
     }
 }

@@ -791,4 +791,4 @@ div.wysiwyg ul.panel li a.empty { background-position: -64px -80px; }
 div.wysiwyg iframe { border: 0; margin: 5px 0 0 0; clear: left; width: 97.5% !important; }
 .Top{ height:30% }
 .Middle{ height:5%; text-align:left}
-.Iframe{ width:100%; height:100%}
+.Iframe{ width:100%; height:100%; margin:15 15 15 15}   

@@ -145,7 +145,7 @@ namespace BusinessLogicLib
                     };
                     session.Save(role);
                 }
-
+                session.Flush();
                 return true;
             }
             catch
@@ -327,6 +327,79 @@ namespace BusinessLogicLib
                 role.state = "No";
                 //session.Update(role);
                 session.SaveOrUpdate(role);
+                session.Flush();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static bool ChangeRequestor(int projectId, string userName)
+        {
+            try
+            {
+                ISession session = GetNHibernateSession();
+                int count = (from r in session.Query<ProjectRole>()
+                             where r.projectId == projectId && r.role == "Request"
+                             select r).Count();
+                if (count == 0)
+                {
+                    ProjectRole p = new ProjectRole
+                    {
+                        projectId = projectId,
+                        role = "Request",
+                        state = "Unknown",
+                        userName = userName
+                    };
+
+                    session.Save(p);
+                }
+                else
+                {
+                    ProjectRole p = (from r in session.Query<ProjectRole>()
+                                     where r.projectId == projectId && r.role == "Request"
+                                     select r).First();
+                    session.Delete(p);
+                    ProjectRole p1 = new ProjectRole
+                    {
+                        projectId = projectId,
+                        role = "Request",
+                        state = "Unknown",
+                        userName = userName
+                    };
+                    session.Save(p1);
+                }
+
+                //session.Flush();
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
+        }
+
+        public static bool IsProjectFinished(int projectId)
+        {
+            ISession session = GetNHibernateSession();
+            var project = (from p in session.Query<DataModels.Object.Project>()
+                           where p.id == projectId
+                           select p).Single();
+            return project.projectState;
+        }
+
+        public static bool FinishProject(int projectId)
+        {
+            try
+            {
+                ISession session = GetNHibernateSession();
+                var project = (from p in session.Query<DataModels.Object.Project>()
+                               where p.id == projectId
+                               select p).Single();
+                project.projectState = true;
+                session.SaveOrUpdate(project);
                 session.Flush();
                 return true;
             }

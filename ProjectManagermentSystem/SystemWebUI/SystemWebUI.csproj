@@ -144,9 +144,11 @@
     <Content Include="resources\scripts\jquery.wysiwyg.js" />
     <Content Include="resources\scripts\simpla.jquery.configuration.js" />
     <Content Include="UserPage\BuildNewProject.aspx" />
+    <Content Include="UserPage\ChangeRequestor.aspx" />
     <Content Include="UserPage\DetailProject.aspx" />
     <Content Include="UserPage\Error.aspx" />
     <Content Include="UserPage\Index.aspx" />
+    <Content Include="UserPage\ManagerRoles.aspx" />
     <Content Include="UserPage\MyJoinProject.aspx" />
     <Content Include="UserPage\MyJoinProjectMessage.aspx" />
     <Content Include="UserPage\MyProject.aspx" />
@@ -228,6 +230,13 @@
     <Compile Include="UserPage\BuildNewProject.aspx.designer.cs">
       <DependentUpon>BuildNewProject.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserPage\ChangeRequestor.aspx.cs">
+      <DependentUpon>ChangeRequestor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\ChangeRequestor.aspx.designer.cs">
+      <DependentUpon>ChangeRequestor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPage\DetailProject.aspx.cs">
       <DependentUpon>DetailProject.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -248,6 +257,13 @@
     </Compile>
     <Compile Include="UserPage\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\ManagerRoles.aspx.cs">
+      <DependentUpon>ManagerRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\ManagerRoles.aspx.designer.cs">
+      <DependentUpon>ManagerRoles.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPage\MyJoinProject.aspx.cs">
       <DependentUpon>MyJoinProject.aspx</DependentUpon>

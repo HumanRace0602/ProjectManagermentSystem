@@ -100,7 +100,7 @@
                     &nbsp;</td>
                 <td style=" text-align:right">
                     <asp:Button ID="Button1" runat="server" Text="确定" onclick="Button1_Click" />
-                    <asp:Button ID="Button2" runat="server" Text="取消" />
+                    <asp:Button ID="Button2" runat="server" Text="取消" onclick="Button2_Click" />
                 </td>
             </tr>
         </table>

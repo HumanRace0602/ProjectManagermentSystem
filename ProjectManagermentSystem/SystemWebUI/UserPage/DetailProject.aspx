@@ -65,6 +65,9 @@
         </asp:TableRow>
         </asp:Table>
         <br />
+        <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click" 
+            onclientclick="return confirm('真的结束该项目？')">结案</asp:LinkButton>
+        <br />
         <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" 
             SelectMethod="GetProjectById" TypeName="BusinessLogicLib.UserProject">
             <SelectParameters>

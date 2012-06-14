@@ -32,16 +32,23 @@ namespace SystemWebUI.UserPage.ProjectDocuments
 
                     if (UserProject.IsProjectExecuteByUser(Int32.Parse(Request.QueryString["id"]), Session["userName"].ToString()))
                     {
-                        Button1.Visible = true;
-                        if (isPublise)
+                        if (BusinessLogicLib.UserProject.IsProjectFinished(Int32.Parse(Request.QueryString["id"])))
                         {
-                            Button1.Text = "编辑";
-                            Session["Button1"] = "Edit";
+                            Button1.Visible = false;
                         }
                         else
                         {
-                            Button1.Text = "添加";
-                            Session["Button1"] = "Append";
+                            Button1.Visible = true;
+                            if (isPublise)
+                            {
+                                Button1.Text = "编辑";
+                                Session["Button1"] = "Edit";
+                            }
+                            else
+                            {
+                                Button1.Text = "添加";
+                                Session["Button1"] = "Append";
+                            }
                         }
                     }
                 }
